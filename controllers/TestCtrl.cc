@@ -1,8 +1,9 @@
 #include "TestCtrl.h"
 
-void
-User::login(const HttpRequestPtr &req, std::function<void(const HttpResponsePtr &)> &&callback, std::string &&userId,
-            const std::string &password) {
+void User::login(const HttpRequestPtr &req,
+                 std::function<void(const HttpResponsePtr &)> &&callback,
+                 std::string &&userId,
+                 const std::string &password) {
     LOG_DEBUG << "User " << userId << " login";
     //认证算法，读数据库，验证身份等...
     //...
